@@ -1,0 +1,17 @@
+---
+#- name: Install ansible prerequisites
+#  hosts: openstack
+#  gather_facts: no
+#  roles:
+#    - role: marvel-nccr.ansible_prerequisites
+
+- name: Set up AiiDA lab server
+  hosts: all
+  roles: 
+    - role: geerlingguy.docker
+      become: true
+      tags: docker
+      vars:
+        docker_users: [ '{{ ansible_user }}' ]
+    - role: marvel-nccr.aiidalab_server
+      tags: aiidalab_server

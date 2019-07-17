@@ -1,0 +1,7 @@
+---
+- src: marvel-nccr.aiidalab_server
+  version: v0.1.0
+- src: geerlingguy.docker
+  version: 2.5.2
+# - src: geerlingguy.certbot
+#   version: 3.0.2

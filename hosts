@@ -1,0 +1,10 @@
+[generic]
+generic-vm1 ansible_host=63.35.203.208
+
+[aws]
+#aws-vm1 ansible_host=
+#aws-vm2 ansible_host=
+
+[openstack]
+#openstack-vm1 ansible_host=
+#openstack-vm1 ansible_host=

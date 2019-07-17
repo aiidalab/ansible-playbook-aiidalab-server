@@ -1,0 +1,5 @@
+---
+cloud_platform: openstack
+
+ansible_user: ubuntu
+ansible_ssh_common_args: -i ./keys/mcloud-openstack-master.pem -o StrictHostKeyChecking=no
