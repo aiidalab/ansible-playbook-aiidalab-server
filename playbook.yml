@@ -15,3 +15,6 @@
         docker_users: [ '{{ ansible_user }}' ]
     - role: marvel-nccr.aiidalab_server
       tags: aiidalab_server
+      vars:
+        # Change to "False" in order to prevent creation of new accounts
+        aiidalab_server_create_users: "True"

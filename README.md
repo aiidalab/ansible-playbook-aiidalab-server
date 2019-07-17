@@ -34,10 +34,12 @@ ansible-galaxy install -r requirements.yml
 
 Once finished, navigate to the IP address of your server.
 
+**Warning:** To keep things simple, this uses the [`FirstUseAuthenticator`](https://github.com/jupyterhub/firstuseauthenticator), which simply creates new JupyterHub users when they enter their username and password.
+In order to disable the creation of new users, uncomment the corresponding lines in the [`playbook.yml`](playbook.yml).
+
 ## Connecting to authentication services
 
-By default, the AiiDA lab server uses the `FirstUseAuthenticato
-r`, which simply creates new users upon first use.
+The `FirstUseAuthenticator` can be useful to get started but for production you may want to connect to an OAuth2 server for authentication.
 See the [OAuthenticator](https://github.com/jupyterhub/oauthenticator) for instructions on how to connect to external authentication services.
 
 ## Acknowledgements
