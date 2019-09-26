@@ -8,7 +8,8 @@ either on a physical server or on a virtual machine (e.g. on Amazon Web Services
 ### Server
 
 - A server running Ubuntu 18.04 with open ports 22 (ssh), 80 (http) and 443 (https).
-- passwordless ssh access to the server via ssh key
+- SSH access to the server via passwordless private SSH key.
+  The user must have `sudo` rights.
 
 For instructions on how to set up cloud services, see [here](https://tljh.jupyter.org/en/latest/index.html).
 
@@ -28,11 +29,10 @@ ansible-galaxy install -r requirements.yml
 
 ### Installation
 
-1. select aws/os host in the `./hosts` file
-1. Edit corresponding `./host_vars/*.yml` file and adapt path to SSH private key
-1. run `ansible-playbook playbook.yml`
+1. Edit the [`hosts`](hosts) file to provide the IP address and SSH key for your server
+1. Execute `ansible-playbook playbook.yml --ask-become-pass`
 
-Once finished, navigate to the IP address of your server.
+Once finished, open the IP address of your server in a web browser.
 
 **Warning:** To keep things simple, this uses the [`FirstUseAuthenticator`](https://github.com/jupyterhub/firstuseauthenticator), which simply creates new JupyterHub users when they enter their username and password.
 In order to disable the creation of new users, uncomment the corresponding lines in the [`playbook.yml`](playbook.yml).

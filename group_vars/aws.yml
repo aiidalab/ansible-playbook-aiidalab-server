@@ -1,8 +1,0 @@
----
-cloud_platform: aws
-
-ansible_user: ubuntu
-ansible_ssh_common_args: -i ./keys/aiida-tutorial.pem -o StrictHostKeyChecking=no
-
-# modify this line to switch to pyhon2
-ansible_python_interpreter: /usr/bin/python3

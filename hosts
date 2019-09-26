@@ -1,10 +1,12 @@
-[generic]
-generic-vm1 ansible_host=63.35.203.208
+[all:vars]
+# replace with linux user to use
+ansible_user=ubuntu
+# replace with path to your private key
+ansible_ssh_common_args=" -i ./keys/private_key -o StrictHostKeyChecking=no"
 
-[aws]
-#aws-vm1 ansible_host=
-#aws-vm2 ansible_host=
+# modify this line for switch to python2
+ansible_python_interpreter=/usr/bin/python3
 
-[openstack]
-#openstack-vm1 ansible_host=
-#openstack-vm1 ansible_host=
+[servers]
+# replace IP address with the one of your server
+aiidalab ansible_host=63.35.203.208
