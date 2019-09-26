@@ -20,7 +20,7 @@ For instructions on how to set up cloud services, see [here](https://tljh.jupyte
 
 Instructions for the terminal:
 ```
-git clone git@github.com:aiidalab/ansible-playbook-aiidalab.git
+git clone https://github.com/aiidalab/ansible-playbook-aiidalab-server.git
 cd ansible-playbook-aiidalab
 pip install -r requirements.txt
 ansible-galaxy install -r requirements.yml
