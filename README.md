@@ -35,7 +35,7 @@ ansible-galaxy install -r requirements.yml
 Once finished, open the IP address of your server in a web browser.
 
 **Warning:** To keep things simple, this uses the [`FirstUseAuthenticator`](https://github.com/jupyterhub/firstuseauthenticator), which simply creates new JupyterHub users when they enter their username and password.
-In order to disable the creation of new users, uncomment the corresponding lines in the [`playbook.yml`](playbook.yml).
+In order to disable the creation of new users, set `aiidalab_server_create_users` to `false` in the [`playbook.yml`](playbook.yml) and run the ansible playbook again.
 
 ## Connecting to authentication services
 
