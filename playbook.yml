@@ -18,3 +18,6 @@
       vars:
         # Change to "False" in order to prevent creation of new accounts
         aiidalab_server_create_users: "True"
+        aiidalab_server_docker_stack: "aiida-1.0"
+        aiidalab_server_uid: 1000
+        #aiidalab_server_build_locally: true
