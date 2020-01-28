@@ -8,16 +8,14 @@
 - name: Set up AiiDA lab server
   hosts: all
   roles:
-    - role: geerlingguy.docker
-      become: true
-      tags: docker
-      vars:
-        docker_users: ['{{ ansible_user }}']
     - role: marvel-nccr.aiidalab_server
       tags: aiidalab_server
       vars:
         # Change to "False" in order to prevent creation of new accounts
         aiidalab_server_create_users: "True"
+        docker_users: ['{{ ansible_user }}']
         aiidalab_server_docker_stack: "aiida-1.0"
-        aiidalab_server_uid: 1000
+        # user id of the jupyterhub user
+        # Note: has to match the uid of "scientist" from the Dockerfile
+        aiidalab_server_uid: 1001
         # aiidalab_server_build_locally: true

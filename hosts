@@ -1,6 +1,6 @@
 [all:vars]
 # replace with linux user to use
-ansible_user=talirz
+ansible_user=ubuntu
 # replace with path to your private key
 #ansible_ssh_common_args=" -i ./keys/private_key -o StrictHostKeyChecking=no"
 
@@ -9,4 +9,4 @@ ansible_python_interpreter=/usr/bin/python3
 
 [servers]
 # replace IP address with the one of your server
-aiidalab ansible_host=togo-aiidalab
+aiidalab ansible_host=schott-aiidalab
