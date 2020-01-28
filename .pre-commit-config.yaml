@@ -1,0 +1,29 @@
+---
+# For use with pre-commit.
+# See usage instructions at https://pre-commit.com
+- repo: local
+  hooks:
+  - id: yamllint
+    name: yamllint
+    description: This hook runs yamllint.
+    entry: yamllint
+    language: system
+    types: [file, yaml]
+
+  - id: ansible-lint
+    name: Ansible-lint
+    description: This hook runs ansible-lint.
+    entry: ansible-lint
+    language: python
+    files: \.(yaml|yml)$
+
+- repo: https://github.com/pre-commit/mirrors-yapf
+  rev: v0.29.0
+  hooks:
+  - id: yapf
+
+- repo: https://github.com/adrienverge/yamllint.git
+  rev: v1.20.0
+  hooks:
+    - id: yamllint
+      args: [-c=./molecule/default/yamllint.yml]
