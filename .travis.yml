@@ -1,8 +1,13 @@
+---
 language: python
 python: 3.6
 
-install: 
- - pip install -r requirements.txt
+services:
+  - docker
+
+install:
+  - pip install -r requirements.txt
 
 script:
- - ansible-galaxy install -r requirements.yml
+  - ansible-galaxy install -r requirements.yml
+  # - molecule test
