@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/marvel-nccr/ansible-playbook-aiidalab-server.svg?branch=master)](https://travis-ci.org/marvel-nccr/ansible-playbook-aiidalab-server)
+[![Release](https://img.shields.io/github/tag/marvel-nccr/ansible-playbook-aiida.svg)](https://github.com/marvel-nccr/ansible-playbook-aiida/releases)
 
 # Ansible playbook for AiiDA Lab Server
 
