@@ -65,7 +65,15 @@ See the [OAuthenticator](https://github.com/jupyterhub/oauthenticator) for instr
 
 ### Cheatsheet
 
-* Run only `aiidalab_server` role: `ansible-playbook playbook.yml --ask-become-pass --tags aiidalab_server --skip-tags dependencies`
+- Run only `aiidalab_server` role: `ansible-playbook playbook.yml --ask-become-pass --tags aiidalab_server --skip-tags dependencies`
+
+On the server: 
+- List running containers: `docker ps`
+- List resource usage: `docker stats`
+- View log of a container: `docker container logs  <container_id>`
+- View JupyterHub log: `tail -f /var/log/syslog | grep jupyterhub`
+- Restart JupyterHub: `sudo service jupyterhub restart`
+- Restart Apache: `sudo apachectl graceful`
 
 ## Acknowledgements
 
