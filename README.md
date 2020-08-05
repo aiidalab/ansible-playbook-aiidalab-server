@@ -66,8 +66,6 @@ See the [OAuthenticator](https://github.com/jupyterhub/oauthenticator) for instr
 ### Cheatsheet
 
 - Run only `aiidalab_server` role: `ansible-playbook playbook.yml --ask-become-pass --tags aiidalab_server --skip-tags dependencies`
-
-Useful Docker commands:
 - List running containers: `docker ps`
 - List resource usage: `docker stats`
 - View log of a container: `docker container logs  <container_id>`
