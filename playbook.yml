@@ -8,7 +8,7 @@
 - name: Set up AiiDA lab server
   hosts: all
   roles:
-    - role: marvel-nccr.aiidalab_server
+    - role: ansible-role-aiidalab-server
       tags: aiidalab_server
       vars:
         # Change to "False" in order to prevent creation of new accounts

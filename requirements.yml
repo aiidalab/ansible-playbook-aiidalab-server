@@ -1,5 +1,5 @@
 ---
-- src: marvel-nccr.aiidalab_server
-  version: v0.2.1
+- src: https://github.com/aiidalab/ansible-role-aiidalab-server
+  version: master
 # - src: geerlingguy.certbot
 #   version: 3.0.2
