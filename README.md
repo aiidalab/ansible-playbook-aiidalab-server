@@ -77,5 +77,5 @@ On the server:
 
 ## Acknowledgements
 
-This work is supported by the [MARVEL National Centre for Competency in Research](http://nccr-marvel.ch)
+This work is supported by the [MARVEL National Centre for Competence in Research](http://nccr-marvel.ch)
 and the [MaX European centre of excellence](http://www.max-centre.eu/)
