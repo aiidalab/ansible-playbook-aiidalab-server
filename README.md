@@ -1,9 +1,8 @@
-[![Build Status](https://travis-ci.org/aiidalab/ansible-playbook-aiidalab-server.svg?branch=master)](https://travis-ci.org/aiidalab/ansible-playbook-aiidalab-server)
 [![Release](https://img.shields.io/github/tag/aiidalab/ansible-playbook-aiidalab-server.svg)](https://github.com/aiidalab/ansible-playbook-aiidalab-server/releases)
 
-# Ansible playbook for AiiDA Lab Server
+# Ansible playbook for AiiDAlab Server
 
-This is an [ansible](https://www.ansible.com/overview/how-ansible-works) playbook for setting up a multi-user [AiiDA lab](https://aiidalab.materialscloud.org)
+This is an [ansible](https://www.ansible.com/overview/how-ansible-works) playbook for setting up a multi-user [AiiDAlab](https://aiidalab.materialscloud.org)
 either on a physical server or on a virtual machine (e.g. on Amazon Web Services or OpenStack).
 
 ### Prerequisites
@@ -42,11 +41,11 @@ In order to disable the creation of new users, set `aiidalab_server_create_users
 
 ## Modifying the user environment
 
-By default, the playbook will simply pull the docker image for the AiiDA lab accounts from the [DockerHub registry](https://hub.docker.com/r/aiidalab/aiidalab-docker-stack).
+By default, the playbook will simply pull the docker image for the AiiDAlab accounts from the [DockerHub registry](https://hub.docker.com/r/aiidalab/aiidalab-docker-stack).
 
 If you would like to modify the user environment (e.g. to install additional packages), uncomment the `aiidalab_server_build_locally: true` line in the playbook and run the ansible playbook again.
 
-This will cause the `marvel-nccr.aiidalab_server` role to clone the git repository containing the `Dockerfile` and build the docker image locally from it. You can then update the image by modifying the `Dockerfile` on the server:
+This will cause the `aiidalab.aiidalab_server` role to clone the git repository containing the `Dockerfile` and build the docker image locally from it. You can then update the image by modifying the `Dockerfile` on the server:
 
 ```
 ssh aiidalab  # ssh into your aiida lab server
